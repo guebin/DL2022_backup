@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Assignment 1 | 딥러닝 (전북대학교 2022년 2학기)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Assignment 1" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://guebin.github.io/DL2022/2022/09/15/Untitled.html" />
+<meta property="og:url" content="https://guebin.github.io/DL2022/2022/09/15/Untitled.html" />
+<meta property="og:site_name" content="딥러닝 (전북대학교 2022년 2학기)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-15T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Assignment 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-15T00:00:00-05:00","datePublished":"2022-09-15T00:00:00-05:00","headline":"Assignment 1","mainEntityOfPage":{"@type":"WebPage","@id":"https://guebin.github.io/DL2022/2022/09/15/Untitled.html"},"url":"https://guebin.github.io/DL2022/2022/09/15/Untitled.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/DL2022/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://guebin.github.io/DL2022/feed.xml" title="딥러닝 (전북대학교 2022년 2학기)" /><link rel="shortcut icon" type="image/x-icon" href="/DL2022/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/DL2022/">딥러닝 (전북대학교 2022년 2학기)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/DL2022/about/">About Me</a><a class="page-link" href="/DL2022/search/">Search</a><a class="page-link" href="/DL2022/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Assignment 1</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-15T00:00:00-05:00" itemprop="datePublished">
+        Sep 15, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/guebin/DL2022/tree/master/_notebooks/Untitled.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/DL2022/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/guebin/DL2022/master?filepath=_notebooks%2FUntitled.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/DL2022/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/guebin/DL2022/blob/master/_notebooks/Untitled.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/DL2022/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fguebin%2FDL2022%2Fblob%2Fmaster%2F_notebooks%2FUntitled.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/DL2022/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/Untitled.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span> 
+<span class="kn">from</span> <span class="nn">fastai.collab</span> <span class="kn">import</span> <span class="o">*</span> 
+<span class="kn">from</span> <span class="nn">fastai.text.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.vision.gan</span> <span class="kn">import</span> <span class="o">*</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-&#51060;&#48120;&#51648;&#51088;&#47308;&#48516;&#49437;"><code>1</code>. &#51060;&#48120;&#51648;&#51088;&#47308;&#48516;&#49437;<a class="anchor-link" href="#1.-&#51060;&#48120;&#51648;&#51088;&#47308;&#48516;&#49437;"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래를 이용하여 <code>MNIST_SAMPLE</code> 이미지 자료를 다운로드 받고 <code>dls</code>오브젝트를 만들어라.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">MNIST_SAMPLE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dls</span> <span class="o">=</span> <span class="n">ImageDataLoaders</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dls</span><span class="o">.</span><span class="n">show_batch</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+" />
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> <code>cnn_learner</code>를 이용하여 <code>lrnr</code> 오브젝트를 생성하라.</p>
+<ul>
+<li>arch 는 resnet34 로 설정할 것 </li>
+<li>metrics 는 error_rate 로 설정할 것 </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(2)</code> <code>fine_tune</code> 을 이용하여 <code>lrnr</code> 오브젝트를 학습하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(3)</code> 아래를 이용하여 X,y를 만들어라.</p>
+<div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">dls</span><span class="o">.</span><span class="n">one_batch</span><span class="p">()</span>
+</pre></div>
+<p>X,y의 shape을 조사하라. X에는 몇개의 이미지가 있는가? 이미지의 size는 얼마인가?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(4)</code> 아래의 코드를 이용하여 X의 두번째 이미지가 어떠한 숫자를 의미하는지 확인하라. (그림보고 3인지 7인지 확인하여 답을 쓸 것)</p>
+
+<pre><code>show_image(X[0])</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>그리고 <code>show_image</code>가 정의된 파일의 경로를 확인하고 show_image가 python 내장함수 인지, torch에서 지원하는 함수인지 fastai에서 지원하는 함수인지 파악하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(5)</code> lrnr 오브젝트를 이용하여 X[0]의 값을 예측하라. 올바르게 예측되었는가? 올바르게 예측되었다면 몇 프로의 확신으로 예측하였는가?</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/DL2022/2022/09/15/Untitled.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/DL2022/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/DL2022/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/DL2022/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/guebin" target="_blank" title="guebin"><svg class="svg-icon grey"><use xlink:href="/DL2022/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
