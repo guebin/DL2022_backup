@@ -1520,17 +1520,17 @@ window.onload = wrap_img;
 <p>${\bf X}=\begin{bmatrix} x_1 \\ \dots \\ x_n \end{bmatrix}$</p>
 </li>
 <li>
-<p>$l_1({\bf X})={\bf X}{\bf W}^{(1)}\overset{bc}{+} {\boldsymbol b}^{(1)}=\begin{bmatrix} x_1 &amp; -x_1 \\ x_2 &amp; -x_2 \\ \dots &amp; \dots \\  x_n &amp; -x_n\end{bmatrix}$</p>
+<p>$l_1({\bf X})={\bf X}{\bf W}^{(1)}\overset{bc}{+} {\boldsymbol b}^{(1)}=\begin{bmatrix} x_1 &amp; -x_1 \\ \dots &amp; \dots \\  x_n &amp; -x_n\end{bmatrix}$</p>
 <ul>
 <li>${\bf W}^{(1)}=\begin{bmatrix} 1 &amp; -1 \end{bmatrix}$</li>
 <li>${\boldsymbol b}^{(1)}=\begin{bmatrix} 0 &amp; 0 \end{bmatrix}$</li>
 </ul>
 </li>
 <li>
-<p>$(a_1\circ l_1)({\bf X})=\text{relu}\big({\bf X}{\bf W}^{(1)}\overset{bc}{+}{\boldsymbol b}^{(1)}\big)\\= \begin{bmatrix} \text{relu}(x_1) &amp; \text{relu}(-x_1) \\ \text{relu}(x_2) &amp; \text{relu}(-x_2) \\ \dots &amp; \dots \\  \text{relu}(x_n) &amp; \text{relu}(-x_n)\end{bmatrix}$</p>
+<p>$(a_1\circ l_1)({\bf X})=\text{relu}\big({\bf X}{\bf W}^{(1)}\overset{bc}{+}{\boldsymbol b}^{(1)}\big)=\begin{bmatrix} \text{relu}(x_1) &amp; \text{relu}(-x_1)\\ \dots &amp; \dots \\  \text{relu}(x_n) &amp; \text{relu}(-x_n)\end{bmatrix}$</p>
 </li>
 <li>
-<p>$(l_2 \circ a_1\circ l_1)({\bf X})=\text{relu}\big({\bf X}{\bf W}^{(1)}\overset{bc}{+}{\boldsymbol b}^{(1)}\big){\bf W}^{(2)}\overset{bc}{+}b^{(2)}\\ =\begin{bmatrix} -4.5\times\text{relu}(x_1) -9.0 \times \text{relu}(-x_1) +4.5 \\ -4.5\times\text{relu}(x_2) -9.0 \times\text{relu}(-x_2) + 4.5 \\ \dots  \\ -4.5\times \text{relu}(x_n) -9.0 \times\text{relu}(-x_n)+4.5 \end{bmatrix}$</p>
+<p>$(l_2 \circ a_1\circ l_1)({\bf X})=\text{relu}\big({\bf X}{\bf W}^{(1)}\overset{bc}{+}{\boldsymbol b}^{(1)}\big){\bf W}^{(2)}\overset{bc}{+}b^{(2)}\\ =\begin{bmatrix} -4.5\times\text{relu}(x_1) -9.0 \times \text{relu}(-x_1) +4.5 \\ \dots  \\ -4.5\times \text{relu}(x_n) -9.0 \times\text{relu}(-x_n)+4.5 \end{bmatrix}$</p>
 <ul>
 <li>${\bf W}^{(2)}=\begin{bmatrix} -4.5 \\ -9 \end{bmatrix}$</li>
 <li>$b^{(2)}=4.5$</li>
