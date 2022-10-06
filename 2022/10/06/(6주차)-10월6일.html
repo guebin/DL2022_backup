@@ -276,7 +276,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> 그래도 아무튼 현재단계에서는 이게 항상된다고 생각하자. 그러면 우리는 아래와 같은 무기를 가진 꼴이 된다.</p>
+<p><code>-</code> 약간의 의구심이 있지만 아무튼 universal approximation thm에 따르면 우리는 아래와 같은 무기를 가진 꼴이 된다.</p>
 <ul>
 <li>우리의 무기: ${\bf X}: (n,p)$ 꼴의 입력에서 ${\bf y}:(n,1)$ 꼴의 출력으로 향하는 맵핑을 "linear -&gt; relu -&gt; linear"와 같은 네트워크를 이용해서 "근사"시킬 수 있다.</li>
 </ul>
@@ -379,7 +379,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span><span class="o">.</span><span class="n">_str</span> <span class="c1"># ㅎㅎ 숨겨놓았네?</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span><span class="o">.</span><span class="n">_str</span> <span class="c1"># 숨겨놓았네?</span>
 </pre></div>
 
     </div>
@@ -1341,7 +1341,7 @@ $$\underset{(n,784)}{\bf X} \overset{l_1}{\to} \underset{(n,64)}{\boldsymbol u^{
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(4) 아래의 지침에 따라 손실함수와 옵티마이저를 설정하고 200 epoch 학습을 진행하라. 학습이 잘 되는가?</p>
+<p>(4) 아래의 지침에 따라 200 epoch 학습을 진행하라. 학습이 잘 되는가?</p>
 <ul>
 <li>이미지의 값을 0과 1사이로 규격화 하라. (Xnp = Xnp/255 를 이용하세요!)</li>
 <li>손실함수는 BECLoss를 이용할 것. torch.nn.BCELoss()를 사용하지 않고 수식을 직접 입력할 것.</li>
