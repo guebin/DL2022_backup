@@ -190,7 +190,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>(정확한 표현)</strong></p>
+<p><code>-</code> 정확한 표현</p>
 
 </div>
 </div>
@@ -420,7 +420,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>(observation 반복을 생략)</strong></p>
+<p><code>-</code> observation 반복을 생략</p>
 
 </div>
 </div>
@@ -513,7 +513,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>그런데 아래와 같이 $i$생략 하는 경우가 많음</p>
+<p>그런데 아래와 같이 $x_i$, $y_i$ 대신에 간단히 $x$, $y$로 쓰는 경우도 많음</p>
 
 </div>
 </div>
@@ -599,7 +599,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>(bias생략)</strong></p>
+<p><code>-</code> bias생략</p>
 
 </div>
 </div>
@@ -679,7 +679,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>위의 경우 $\hat{w}_1$대신에 $\hat{w}$를 써도 무방</p>
+<p>이 $\hat{w}_1$대신에 $\hat{w}$를 쓰는 것이 더 자연스러움</p>
 
 </div>
 </div>
@@ -752,7 +752,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>bias=True</code> 옵션은 생략가능</p>
+<p>동그라미안의 bias=True 라는 표시도 생략함 (보통 bias를 true로 생각하므로)</p>
 
 </div>
 </div>
@@ -825,7 +825,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>hat도 보통 생략한다.</p>
+<p>hat도 보통 생략한다. 즉 $\hat{y}$ 대신에 간단히 $y$로, $\hat{w}$ 대신에 간단히 $w$를 사용한다.</p>
 
 </div>
 </div>
@@ -898,7 +898,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>선형변환의 결과는 $u$로 표현한다.</p>
+<p>선형변환의 결과는 아래와 같이 $u$로 표현하기도 한다.</p>
 
 </div>
 </div>
@@ -970,24 +970,8 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>다이어그램은 그리는 사람의 취향에 따라 조금 다르게 그려지긴 합니다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>저는 아래처럼 기호로 쓰는게 더 이해가 잘되는 편입니다. (그리고 hat도 생략하기 싫어해요)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>$\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,1)}{\boldsymbol u} \overset{a_1}{\to} \underset{(n,1)}{\hat{\boldsymbol y}}$</p>
-<ul>
-<li>$a_1(x) =\text{sigmoid}(x)=\frac{e^x}{1+e^{x}}$</li>
-</ul>
+<blockquote><p>다이어그램은 그리는 사람의 취향에 따라 그리는 방법이 조금씩 다릅니다. 즉 교재마다 달라요.</p>
+</blockquote>
 
 </div>
 </div>
