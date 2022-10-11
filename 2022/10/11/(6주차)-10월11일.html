@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      17 min read
     
 </span></p>
 
@@ -140,8 +140,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#imports">imports </a></li>
 <li class="toc-entry toc-h2"><a href="#신경망의-표현-(${\boldsymbol-x}-\to-\hat{\boldsymbol-y}$-로-가는-과정을-그림으로-표현)">신경망의 표현 (${\boldsymbol x} \to \hat{\boldsymbol y}$ 로 가는 과정을 그림으로 표현) </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#예제1:-$\hat{y}_i-=-\text{sigmoid}\big({\hat{w}_0-+-\hat{w}_1-x_i}\big)-=-\text{sigmoid}(u_i),-\quad-i=1,2,\dots,n$">예제1: $\hat{y}_i = \text{sigmoid}\big({\hat{w}_0 + \hat{w}_1 x_i}\big) = \text{sigmoid}(u_i), \quad i=1,2,\dots,n$ </a></li>
-<li class="toc-entry toc-h3"><a href="#예제2:-$\underset{(n,1)}{\bf-X}-\overset{l_1}{\to}-\underset{(n,2)}{\boldsymbol-u^{(1)}}-\overset{relu}{\to}-\underset{(n,2)}{\boldsymbol-v^{(1)}}-\overset{l_2}{\to}-\underset{(n,1)}{\boldsymbol-u^{(2)}}-\overset{sig}{\to}-\underset{(n,1)}{\boldsymbol-v^{(2)}}--\overset{iden}{\to}-\underset{(n,1)}{net({\bf-X})=\hat{\boldsymbol-y}}$">예제2: $\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,2)}{\boldsymbol u^{(1)}} \overset{relu}{\to} \underset{(n,2)}{\boldsymbol v^{(1)}} \overset{l_2}{\to} \underset{(n,1)}{\boldsymbol u^{(2)}} \overset{sig}{\to} \underset{(n,1)}{\boldsymbol v^{(2)}}  \overset{iden}{\to} \underset{(n,1)}{net({\bf X})=\hat{\boldsymbol y}}$ </a></li>
+<li class="toc-entry toc-h3"><a href="#예제1:">예제1: </a></li>
+<li class="toc-entry toc-h3"><a href="#예제2:-$\underset{(n,1)}{\bf-X}-\overset{l_1}{\to}-\underset{(n,2)}{\boldsymbol-u^{(1)}}-\overset{relu}{\to}-\underset{(n,2)}{\boldsymbol-v^{(1)}}-\overset{l_2}{\to}-\underset{(n,1)}{\boldsymbol-u^{(2)}}-\overset{sig}{\to}-\underset{(n,1)}{\boldsymbol-v^{(2)}}-=-net({\bf-X})=\hat{\boldsymbol-y}$">예제2: $\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,2)}{\boldsymbol u^{(1)}} \overset{relu}{\to} \underset{(n,2)}{\boldsymbol v^{(1)}} \overset{l_2}{\to} \underset{(n,1)}{\boldsymbol u^{(2)}} \overset{sig}{\to} \underset{(n,1)}{\boldsymbol v^{(2)}} = net({\bf X})=\hat{\boldsymbol y}$ </a></li>
 <li class="toc-entry toc-h3"><a href="#예제3:-$\underset{(n,784)}{\bf-X}-\overset{l_1}{\to}-\underset{(n,32)}{\boldsymbol-u^{(1)}}-\overset{relu}{\to}-\underset{(n,32)}{\boldsymbol-v^{(1)}}-\overset{l_1}{\to}-\underset{(n,1)}{\boldsymbol-u^{(2)}}-\overset{sig}{\to}-\underset{(n,1)}{\boldsymbol-v^{(2)}}=\underset{(n,1)}{\hat{\boldsymbol-y}}$">예제3: $\underset{(n,784)}{\bf X} \overset{l_1}{\to} \underset{(n,32)}{\boldsymbol u^{(1)}} \overset{relu}{\to} \underset{(n,32)}{\boldsymbol v^{(1)}} \overset{l_1}{\to} \underset{(n,1)}{\boldsymbol u^{(2)}} \overset{sig}{\to} \underset{(n,1)}{\boldsymbol v^{(2)}}=\underset{(n,1)}{\hat{\boldsymbol y}}$ </a></li>
 </ul>
 </li>
@@ -266,8 +266,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="예제1:-$\hat{y}_i-=-\text{sigmoid}\big({\hat{w}_0-+-\hat{w}_1-x_i}\big)-=-\text{sigmoid}(u_i),-\quad-i=1,2,\dots,n$">
-<a class="anchor" href="#%EC%98%88%EC%A0%9C1:-%24%5Chat%7By%7D_i-=-%5Ctext%7Bsigmoid%7D%5Cbig(%7B%5Chat%7Bw%7D_0-+-%5Chat%7Bw%7D_1-x_i%7D%5Cbig)-=-%5Ctext%7Bsigmoid%7D(u_i),-%5Cquad-i=1,2,%5Cdots,n%24" aria-hidden="true"><span class="octicon octicon-link"></span></a>예제1: $\hat{y}_i = \text{sigmoid}\big({\hat{w}_0 + \hat{w}_1 x_i}\big) = \text{sigmoid}(u_i), \quad i=1,2,\dots,n$<a class="anchor-link" href="#%EC%98%88%EC%A0%9C1:-%24%5Chat%7By%7D_i-=-%5Ctext%7Bsigmoid%7D%5Cbig(%7B%5Chat%7Bw%7D_0-+-%5Chat%7Bw%7D_1-x_i%7D%5Cbig)-=-%5Ctext%7Bsigmoid%7D(u_i),-%5Cquad-i=1,2,%5Cdots,n%24"> </a>
+<h3 id="예제1:">
+<a class="anchor" href="#%EC%98%88%EC%A0%9C1:" aria-hidden="true"><span class="octicon octicon-link"></span></a>예제1:<a class="anchor-link" href="#%EC%98%88%EC%A0%9C1:"> </a>
 </h3>
 </div>
 </div>
@@ -287,56 +287,32 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git add .
-<span class="o">!</span>git commit -m .
-<span class="o">!</span>git push
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gv</span><span class="p">(</span><span class="s1">''' </span>
+<span class="s1">    "1" -&gt; "ŵ₀ + xₙ*ŵ₁,    bias=False"[label="* ŵ₀"]</span>
+<span class="s1">    "xₙ" -&gt; "ŵ₀ + xₙ*ŵ₁,    bias=False"[label="* ŵ₁"]</span>
+<span class="s1">    "ŵ₀ + xₙ*ŵ₁,    bias=False" -&gt; "ŷₙ"[label="sigmoid"]</span>
+
+<span class="s1">    "." -&gt; "...................................."[label="* ŵ₀"]</span>
+<span class="s1">    ".." -&gt; "...................................."[label="* ŵ₁"]</span>
+<span class="s1">    "...................................." -&gt; "..."[label=" "]</span>
+
+<span class="s1">    "1 " -&gt; "ŵ₀ + x₂*ŵ₁,    bias=False"[label="* ŵ₀"]</span>
+<span class="s1">    "x₂" -&gt; "ŵ₀ + x₂*ŵ₁,    bias=False"[label="* ŵ₁"]</span>
+<span class="s1">    "ŵ₀ + x₂*ŵ₁,    bias=False" -&gt; "ŷ₂"[label="sigmoid"]</span>
+<span class="s1">    </span>
+<span class="s1">    "1  " -&gt; "ŵ₀ + x₁*ŵ₁,    bias=False"[label="* ŵ₀"]</span>
+<span class="s1">    "x₁" -&gt; "ŵ₀ + x₁*ŵ₁,    bias=False"[label="* ŵ₁"]</span>
+<span class="s1">    "ŵ₀ + x₁*ŵ₁,    bias=False" -&gt; "ŷ₁"[label="sigmoid"]</span>
+<span class="s1">'''</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 720cdb0] .
- 1 file changed, 1 insertion(+), 18 deletions(-)
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 392 bytes | 392.00 KiB/s, done.
-Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-To https://github.com/guebin/DL2022.git
-   2be32d1..720cdb0  master -&gt; master
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
@@ -544,6 +520,7 @@ To https://github.com/guebin/DL2022.git
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -1129,8 +1106,8 @@ To https://github.com/guebin/DL2022.git
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="예제2:-$\underset{(n,1)}{\bf-X}-\overset{l_1}{\to}-\underset{(n,2)}{\boldsymbol-u^{(1)}}-\overset{relu}{\to}-\underset{(n,2)}{\boldsymbol-v^{(1)}}-\overset{l_2}{\to}-\underset{(n,1)}{\boldsymbol-u^{(2)}}-\overset{sig}{\to}-\underset{(n,1)}{\boldsymbol-v^{(2)}}--\overset{iden}{\to}-\underset{(n,1)}{net({\bf-X})=\hat{\boldsymbol-y}}$">
-<a class="anchor" href="#%EC%98%88%EC%A0%9C2:-%24%5Cunderset%7B(n,1)%7D%7B%5Cbf-X%7D-%5Coverset%7Bl_1%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-u%5E%7B(1)%7D%7D-%5Coverset%7Brelu%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-v%5E%7B(1)%7D%7D-%5Coverset%7Bl_2%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-u%5E%7B(2)%7D%7D-%5Coverset%7Bsig%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-v%5E%7B(2)%7D%7D--%5Coverset%7Biden%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7Bnet(%7B%5Cbf-X%7D)=%5Chat%7B%5Cboldsymbol-y%7D%7D%24" aria-hidden="true"><span class="octicon octicon-link"></span></a>예제2: $\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,2)}{\boldsymbol u^{(1)}} \overset{relu}{\to} \underset{(n,2)}{\boldsymbol v^{(1)}} \overset{l_2}{\to} \underset{(n,1)}{\boldsymbol u^{(2)}} \overset{sig}{\to} \underset{(n,1)}{\boldsymbol v^{(2)}}  \overset{iden}{\to} \underset{(n,1)}{net({\bf X})=\hat{\boldsymbol y}}$<a class="anchor-link" href="#%EC%98%88%EC%A0%9C2:-%24%5Cunderset%7B(n,1)%7D%7B%5Cbf-X%7D-%5Coverset%7Bl_1%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-u%5E%7B(1)%7D%7D-%5Coverset%7Brelu%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-v%5E%7B(1)%7D%7D-%5Coverset%7Bl_2%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-u%5E%7B(2)%7D%7D-%5Coverset%7Bsig%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-v%5E%7B(2)%7D%7D--%5Coverset%7Biden%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7Bnet(%7B%5Cbf-X%7D)=%5Chat%7B%5Cboldsymbol-y%7D%7D%24"> </a>
+<h3 id="예제2:-$\underset{(n,1)}{\bf-X}-\overset{l_1}{\to}-\underset{(n,2)}{\boldsymbol-u^{(1)}}-\overset{relu}{\to}-\underset{(n,2)}{\boldsymbol-v^{(1)}}-\overset{l_2}{\to}-\underset{(n,1)}{\boldsymbol-u^{(2)}}-\overset{sig}{\to}-\underset{(n,1)}{\boldsymbol-v^{(2)}}-=-net({\bf-X})=\hat{\boldsymbol-y}$">
+<a class="anchor" href="#%EC%98%88%EC%A0%9C2:-%24%5Cunderset%7B(n,1)%7D%7B%5Cbf-X%7D-%5Coverset%7Bl_1%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-u%5E%7B(1)%7D%7D-%5Coverset%7Brelu%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-v%5E%7B(1)%7D%7D-%5Coverset%7Bl_2%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-u%5E%7B(2)%7D%7D-%5Coverset%7Bsig%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-v%5E%7B(2)%7D%7D-=-net(%7B%5Cbf-X%7D)=%5Chat%7B%5Cboldsymbol-y%7D%24" aria-hidden="true"><span class="octicon octicon-link"></span></a>예제2: $\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,2)}{\boldsymbol u^{(1)}} \overset{relu}{\to} \underset{(n,2)}{\boldsymbol v^{(1)}} \overset{l_2}{\to} \underset{(n,1)}{\boldsymbol u^{(2)}} \overset{sig}{\to} \underset{(n,1)}{\boldsymbol v^{(2)}} = net({\bf X})=\hat{\boldsymbol y}$<a class="anchor-link" href="#%EC%98%88%EC%A0%9C2:-%24%5Cunderset%7B(n,1)%7D%7B%5Cbf-X%7D-%5Coverset%7Bl_1%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-u%5E%7B(1)%7D%7D-%5Coverset%7Brelu%7D%7B%5Cto%7D-%5Cunderset%7B(n,2)%7D%7B%5Cboldsymbol-v%5E%7B(1)%7D%7D-%5Coverset%7Bl_2%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-u%5E%7B(2)%7D%7D-%5Coverset%7Bsig%7D%7B%5Cto%7D-%5Cunderset%7B(n,1)%7D%7B%5Cboldsymbol-v%5E%7B(2)%7D%7D-=-net(%7B%5Cbf-X%7D)=%5Chat%7B%5Cboldsymbol-y%7D%24"> </a>
 </h3>
 </div>
 </div>
