@@ -153,7 +153,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#CPU-vs-GPU">CPU vs GPU </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#GPU-사용법">GPU 사용법 </a></li>
+<li class="toc-entry toc-h3"><a href="#GPU-사용방법">GPU 사용방법 </a></li>
 <li class="toc-entry toc-h3"><a href="#시간측정-(예비학습)">시간측정 (예비학습) </a></li>
 <li class="toc-entry toc-h3"><a href="#CPU-(512)">CPU (512) </a></li>
 <li class="toc-entry toc-h3"><a href="#GPU-(512)">GPU (512) </a></li>
@@ -201,7 +201,7 @@ window.onload = wrap_img;
 <p>
 </p>
 <center class="youtube-iframe-wrapper">
-    <iframe width="730" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen=""></iframe>
+    <iframe width="730" height="315" src="https://www.youtube.com/embed/playlist?list=PLQqh36zP38-zXzWcQw8KYaSDuBOrEp7AA" frameborder="0" allowfullscreen=""></iframe>
 </center>
 
 
@@ -2410,7 +2410,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> 지금까지 사실 우리는 CPU만을 사용하였음</p>
+<p><code>-</code> 파이토치에서 GPU를 쓰는 방법을 알아보자. (사실 지금까지 우리는 CPU만 쓰고 있었음)</p>
 
 </div>
 </div>
@@ -2418,20 +2418,48 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> GPU를 어떻게 쓰는지, 그리고 GPU를 쓰면 얼마나 빨라지는지 살펴보자.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="GPU-사용법">
-<a class="anchor" href="#GPU-%EC%82%AC%EC%9A%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>GPU 사용법<a class="anchor-link" href="#GPU-%EC%82%AC%EC%9A%A9%EB%B2%95"> </a>
+<h3 id="GPU-사용방법">
+<a class="anchor" href="#GPU-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>GPU 사용방법<a class="anchor-link" href="#GPU-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95"> </a>
 </h3>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> cpu 연산이 가능한 메모리에 데이터 저장</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">x_cpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">y_cpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">net_cpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> gpu 연산이 가능한 메모리에 데이터 저장</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2440,140 +2468,9 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="n">x_cpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># x: cpu </span>
-<span class="n">y_cpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># y: cpu</span>
-<span class="n">net_cpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># What: cpu </span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> cpu에 있는 값들</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_cpu</span><span class="p">,</span><span class="n">y_cpu</span><span class="p">,</span><span class="n">net_cpu</span><span class="o">.</span><span class="n">bias</span><span class="p">,</span><span class="n">net_cpu</span><span class="o">.</span><span class="n">weight</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(tensor([[0.0000],
-         [0.1000],
-         [0.2000]]),
- tensor([[0.0000],
-         [0.2000],
-         [0.4000]]),
- Parameter containing:
- tensor([-0.8470], requires_grad=True),
- Parameter containing:
- tensor([[-0.3467]], requires_grad=True))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>$x,y,\hat{w}_0,\hat{w}_1$ 모두 "cpu연산이 가능한 저장공간"(="일반메모리")에 있음</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> gpu에 있는 값들</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_cpu</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda:0"</span><span class="p">)</span> <span class="c1"># 이 명령을 하면 x의 값을 gpu연산가능한공간(=GPU메모리)에 옮긴다. </span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>tensor([[0.0000],
-        [0.1000],
-        [0.2000]], device='cuda:0')</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>device='cuda:0' 의 의미? x가 현재 GPU메모리에 있다는 뜻</li>
-</ul>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_gpu</span> <span class="o">=</span> <span class="n">x_cpu</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda:0"</span><span class="p">)</span>
+<span class="n">x_gpu</span> <span class="o">=</span> <span class="n">x_cpu</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda:0"</span><span class="p">)</span>
 <span class="n">y_gpu</span> <span class="o">=</span> <span class="n">y_cpu</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda:0"</span><span class="p">)</span>
+<span class="n">net_gpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda:0"</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -2583,6 +2480,14 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> cpu 혹은 gpu 연산이 가능한 메모리에 저장된 값들을 확인</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2590,7 +2495,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_cpu</span><span class="p">,</span><span class="n">x_gpu</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_cpu</span><span class="p">,</span> <span class="n">y_cpu</span><span class="p">,</span> <span class="n">net_cpu</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">net_cpu</span><span class="o">.</span><span class="n">bias</span>
 </pre></div>
 
     </div>
@@ -2609,101 +2514,54 @@ window.onload = wrap_img;
          [0.1000],
          [0.2000]]),
  tensor([[0.0000],
-         [0.1000],
-         [0.2000]], device='cuda:0'))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_cpu</span><span class="p">,</span><span class="n">y_gpu</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(tensor([[0.0000],
          [0.2000],
          [0.4000]]),
- tensor([[0.0000],
-         [0.2000],
-         [0.4000]], device='cuda:0'))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="c1">#net_gpu = net_cpu.to("cuda:0") ## &lt;-- 이걸 실행하면 net_cpu의 값도 gpu에 올라간다</span>
-<span class="n">net_gpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda:0"</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">net_cpu</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">net_gpu</span><span class="o">.</span><span class="n">weight</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(Parameter containing:
+ Parameter containing:
  tensor([[-0.3467]], requires_grad=True),
  Parameter containing:
- tensor([[-0.3467]], device='cuda:0', requires_grad=True))</pre>
+ tensor([-0.8470], requires_grad=True))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_gpu</span><span class="p">,</span> <span class="n">y_gpu</span><span class="p">,</span> <span class="n">net_gpu</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">net_gpu</span><span class="o">.</span><span class="n">bias</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(tensor([[0.0000],
+         [0.1000],
+         [0.2000]], device='cuda:0'),
+ tensor([[0.0000],
+         [0.2000],
+         [0.4000]], device='cuda:0'),
+ Parameter containing:
+ tensor([[-0.3467]], device='cuda:0', requires_grad=True),
+ Parameter containing:
+ tensor([-0.8470], device='cuda:0', requires_grad=True))</pre>
 </div>
 
 </div>
@@ -3176,7 +3034,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.2391419410705566</pre>
+<pre>4.9920783042907715</pre>
 </div>
 
 </div>
@@ -3296,7 +3154,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.3269507884979248</pre>
+<pre>0.28586554527282715</pre>
 </div>
 
 </div>
@@ -3416,7 +3274,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.5341954231262207</pre>
+<pre>0.5355696678161621</pre>
 </div>
 
 </div>
@@ -3500,7 +3358,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>2.44942045211792</pre>
+<pre>2.380666494369507</pre>
 </div>
 
 </div>
@@ -3565,7 +3423,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.5081160068511963</pre>
+<pre>0.5442469120025635</pre>
 </div>
 
 </div>
@@ -3576,6 +3434,14 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 왜 이런 차이가 나는가? 연산을 하는 주체는 코어인데 CPU는 수는 적지만 일을 잘하는 코어들을 가지고 있고 GPU는 일은 못하지만 다수의 코어를 가지고 있기 때문</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
