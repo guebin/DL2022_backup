@@ -4565,7 +4565,7 @@ tensor([9.]) tensor([0.])
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> $m$이 매우 클때 아래의 네트워크 거의 무엇이든 맞출수 있다고 보면 된다.</p>
+<p><code>-</code> $m$이 매우 클때 아래의 네트워크 거의 무엇이든 맞출 수 있다고 보면 된다.</p>
 <ul>
 <li>$\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,m)}{\boldsymbol u^{(1)}} \overset{h}{\to} \underset{(n,m)}{\boldsymbol v^{(1)}} \overset{l_2}{\to} \underset{(n,1)}{\hat{\boldsymbol y}}$ </li>
 <li>$\underset{(n,1)}{\bf X} \overset{l_1}{\to} \underset{(n,m)}{\boldsymbol u^{(1)}} \overset{sig}{\to} \underset{(n,m)}{\boldsymbol v^{(1)}} \overset{l_2}{\to} \underset{(n,1)}{\hat{\boldsymbol y}}$</li>
@@ -4616,7 +4616,7 @@ tensor([9.]) tensor([0.])
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f62e48fc190&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f62dc4853d0&gt;]</pre>
 </div>
 
 </div>
@@ -4659,7 +4659,7 @@ tensor([9.]) tensor([0.])
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">out_features</span><span class="o">=</span><span class="mi">512</span><span class="p">),</span> 
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span><span class="n">out_features</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> 
-<span class="n">optimizer</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<span class="n">optimizr</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
 <span class="n">loss_fn</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span> 
@@ -4670,7 +4670,7 @@ tensor([9.]) tensor([0.])
     <span class="c1">## 3 </span>
     <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
     <span class="c1">## 4 </span>
-    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
     <span class="n">net</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span> 
 </pre></div>
 
@@ -4704,7 +4704,7 @@ tensor([9.]) tensor([0.])
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f62e4933310&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f630f9742d0&gt;]</pre>
 </div>
 
 </div>
@@ -4810,23 +4810,23 @@ tensor([9.]) tensor([0.])
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
-<span class="n">net1</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+<span class="n">net</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">out_features</span><span class="o">=</span><span class="mi">512</span><span class="p">),</span> 
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span><span class="n">out_features</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> 
-<span class="n">optimizr1</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net1</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<span class="n">optimizr</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
 <span class="n">loss_fn</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span> 
     <span class="c1">## 1 </span>
     <span class="c1"># net(xtr) </span>
     <span class="c1">## 2 </span>
-    <span class="n">loss</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">(</span><span class="n">net1</span><span class="p">(</span><span class="n">xtr</span><span class="p">),</span><span class="n">ytr</span><span class="p">)</span> 
+    <span class="n">loss</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">xtr</span><span class="p">),</span><span class="n">ytr</span><span class="p">)</span> 
     <span class="c1">## 3 </span>
     <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
     <span class="c1">## 4 </span>
-    <span class="n">optimizr1</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
-    <span class="n">optimizr1</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span> 
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span> 
 </pre></div>
 
     </div>
@@ -4852,7 +4852,7 @@ tensor([9.]) tensor([0.])
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtr</span><span class="p">,</span><span class="n">net1</span><span class="p">(</span><span class="n">xtr</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># prediction (train) </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtr</span><span class="p">,</span><span class="n">net</span><span class="p">(</span><span class="n">xtr</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># prediction (train) </span>
 </pre></div>
 
     </div>
@@ -4867,7 +4867,7 @@ tensor([9.]) tensor([0.])
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f62de905190&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f62d07d0d10&gt;]</pre>
 </div>
 
 </div>
@@ -4914,8 +4914,8 @@ tensor([9.]) tensor([0.])
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtr</span><span class="p">,</span><span class="n">net1</span><span class="p">(</span><span class="n">xtr</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># prediction (train) </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtest</span><span class="p">,</span><span class="n">net1</span><span class="p">(</span><span class="n">xtest</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># prediction with unseen data (test) </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtr</span><span class="p">,</span><span class="n">net</span><span class="p">(</span><span class="n">xtr</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># prediction (train) </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtest</span><span class="p">,</span><span class="n">net</span><span class="p">(</span><span class="n">xtest</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># prediction with unseen data (test) </span>
 </pre></div>
 
     </div>
@@ -4930,7 +4930,7 @@ tensor([9.]) tensor([0.])
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f62de084550&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f62da6f1910&gt;]</pre>
 </div>
 
 </div>
