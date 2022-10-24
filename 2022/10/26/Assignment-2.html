@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -499,7 +499,7 @@ $$\frac{\partial}{\partial {\bf W}}loss(w_0,w_1) ~\Bigg|_{~\hat{w}_0,\hat{w}_1}$
 <div class="highlight"><pre><span></span><span class="n">net</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4096</span><span class="p">),</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
-    <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="err">?</span><span class="p">,</span><span class="err">?</span><span class="p">)</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="err">???</span><span class="p">,</span><span class="err">???</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -515,7 +515,7 @@ $$\frac{\partial}{\partial {\bf W}}loss(w_0,w_1) ~\Bigg|_{~\hat{w}_0,\hat{w}_1}$
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(4)</code> 아래와 같은 Dropout Layer를 (2)의 네트워크 중 적절한 위치에 추가한뒤 재학습하라.</p>
+<p><code>(4)</code> 아래와 같은 Dropout Layer를 (2)의 네트워크 중 적절한 위치에 추가한 뒤 모형을 재학습하라.</p>
 <div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 
@@ -676,6 +676,19 @@ $$\frac{\partial}{\partial {\bf W}}loss(w_0,w_1) ~\Bigg|_{~\hat{w}_0,\hat{w}_1}$
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>구환</strong>: 모델 (4)-(5)는 표현력은 (1)과 동일하지만 추정할 파라메터는 (1)보다 많으므로 효율적인 모델이라고 볼 수 없어.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-&#45796;&#51020;&#51012;-&#51069;&#44256;-&#52280;-&#44144;&#51667;&#51012;-&#54032;&#45800;&#54616;&#50668;&#46972;."><code>5</code>. &#45796;&#51020;&#51012; &#51069;&#44256; &#52280; &#44144;&#51667;&#51012; &#54032;&#45800;&#54616;&#50668;&#46972;.<a class="anchor-link" href="#5.-&#45796;&#51020;&#51012;-&#51069;&#44256;-&#52280;-&#44144;&#51667;&#51012;-&#54032;&#45800;&#54616;&#50668;&#46972;."> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> 로지스틱 모형은 Adam 옵티마이저가 아닐 경우 적합시키는 것이 불가능하다.</p>
 
 </div>
 </div>
