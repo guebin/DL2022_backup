@@ -515,7 +515,7 @@ $$\frac{\partial}{\partial {\bf W}}loss(w_0,w_1) ~\Bigg|_{~\hat{w}_0,\hat{w}_1}$
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(4)</code> 아래와 같은 Dropout Layer를 (2)의 네트워크 중 적절한 위치에 추가한 뒤 모형을 재학습하라.</p>
+<p><code>(4)</code> 아래와 같은 Dropout Layer를 (2)의 네트워크 중 적절한 위치에 추가하라. 그리고 다시 $\big( {\boldsymbol x}_{train},{\boldsymbol y}_{train}\big)$만을 사용해 모형을 재학습하라.</p>
 <div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 
