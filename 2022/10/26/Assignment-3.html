@@ -161,24 +161,6 @@ window.onload = wrap_img;
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="k">def</span> <span class="nf">gv</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="s1">&#39;digraph G{ rankdir=&quot;LR&quot;&#39;</span><span class="o">+</span><span class="n">s</span> <span class="o">+</span> <span class="s1">&#39;; }&#39;</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-&#53356;&#47204;&#47553;&#51012;-&#53685;&#54620;-&#51060;&#48120;&#51648;-&#48516;&#49437;-&#48143;-CAM"><code>1</code>. &#53356;&#47204;&#47553;&#51012; &#53685;&#54620; &#51060;&#48120;&#51648; &#48516;&#49437; &#48143; CAM<a class="anchor-link" href="#1.-&#53356;&#47204;&#47553;&#51012;-&#53685;&#54620;-&#51060;&#48120;&#51648;-&#48516;&#49437;-&#48143;-CAM"> </a></h2>
@@ -192,6 +174,13 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>힌트1: <code>hynn</code>, <code>iu</code> 라는 키워드로 크롤링하여 이미지자료를 모으는 코드</em></strong></p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -199,7 +188,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!pip install -Uqq duckduckgo_search</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 크롤링에 필요한 준비작업들</span>
+<span class="c1">#!pip install -Uqq duckduckgo_search</span>
 <span class="kn">from</span> <span class="nn">duckduckgo_search</span> <span class="kn">import</span> <span class="n">ddg_images</span>
 <span class="kn">from</span> <span class="nn">fastdownload</span> <span class="kn">import</span> <span class="n">download_url</span>
 <span class="kn">from</span> <span class="nn">fastcore.all</span> <span class="kn">import</span> <span class="o">*</span>
@@ -213,13 +203,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><em>힌트1: <code>hynn</code>, <code>iu</code> 라는 키워드로 크롤링하여 이미지자료를 모으는 코드</em></strong></p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
