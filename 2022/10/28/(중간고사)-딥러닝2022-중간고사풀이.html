@@ -250,7 +250,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f2c3c5891d0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f696ef38650&gt;]</pre>
 </div>
 
 </div>
@@ -377,7 +377,7 @@ $$y_i = w_0+w_1 x_i +\epsilon_i, \quad \epsilon_i \overset{iid}{\sim} N(0,\sigma
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span><span class="n">lr</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -420,7 +420,7 @@ $$y_i = w_0+w_1 x_i +\epsilon_i, \quad \epsilon_i \overset{iid}{\sim} N(0,\sigma
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>tensor([[-15.7290,  14.7198]])
-tensor([[-4.,  9.]])
+tensor([[-4.9000,  9.9000]])
 ---
 </pre>
 </div>
@@ -481,17 +481,17 @@ tensor([[-4.,  9.]])
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>tensor([[-13.6179,  12.3109]])
-tensor([[-3.0063,  8.0086]])
+<pre>tensor([[-15.5179,  14.4789]])
+tensor([[-4.8000,  9.8000]])
 ---
-tensor([[-11.5203,   9.9223]])
-tensor([[-2.0248,  7.0343]])
+tensor([[-15.3068,  14.2382]])
+tensor([[-4.7001,  9.7002]])
 ---
-tensor([[-9.4491,  7.5746]])
-tensor([[-1.0630,  6.0889]])
+tensor([[-15.0960,  13.9976]])
+tensor([[-4.6003,  9.6004]])
 ---
-tensor([[-7.4203,  5.2952]])
-tensor([[-0.1301,  5.1873]])
+tensor([[-14.8852,  13.7572]])
+tensor([[-4.5006,  9.5008]])
 ---
 </pre>
 </div>
@@ -566,35 +566,35 @@ tensor([[-0.1301,  5.1873]])
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>tensor([[-5.4545,  3.1198]])
-tensor([[0.9607, 4.5633]])
+<pre>tensor([[-14.6748,  13.5172]])
+tensor([[-1.5657,  6.7973]])
 ---
-tensor([[-3.2033,  1.5648]])
-tensor([[1.6014, 4.2503]])
+tensor([[-8.5044,  6.9790]])
+tensor([[0.1352, 5.4015]])
 ---
-tensor([[-1.8872,  0.7745]])
-tensor([[1.9789, 4.0954]])
+tensor([[-4.9476,  3.5827]])
+tensor([[1.1247, 4.6850]])
 ---
-tensor([[-1.1151,  0.3766]])
-tensor([[2.2019, 4.0201]])
+tensor([[-2.8889,  1.8262]])
+tensor([[1.7025, 4.3198]])
 ---
-tensor([[-0.6607,  0.1787]])
-tensor([[2.3340, 3.9844]])
+tensor([[-1.6928,  0.9227]])
+tensor([[2.0411, 4.1352]])
 ---
-tensor([[-0.3924,  0.0819]])
-tensor([[2.4125, 3.9680]])
+tensor([[-0.9951,  0.4611]])
+tensor([[2.2401, 4.0430]])
 ---
-tensor([[-0.2336,  0.0355]])
-tensor([[2.4592, 3.9609]])
+tensor([[-0.5868,  0.2271]])
+tensor([[2.3575, 3.9976]])
 ---
-tensor([[-0.1394,  0.0140]])
-tensor([[2.4871, 3.9581]])
+tensor([[-0.3471,  0.1097]])
+tensor([[2.4269, 3.9756]])
 ---
-tensor([[-0.0833,  0.0045]])
-tensor([[2.5038, 3.9572]])
+tensor([[-0.2058,  0.0516]])
+tensor([[2.4680, 3.9653]])
 ---
-tensor([[-0.0499,  0.0006]])
-tensor([[2.5138, 3.9571]])
+tensor([[-0.1223,  0.0233]])
+tensor([[2.4925, 3.9607]])
 ---
 </pre>
 </div>
