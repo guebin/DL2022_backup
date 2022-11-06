@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>dr | 딥러닝 (전북대학교 2022년 2학기)</title>
+<title>Title | 딥러닝 (전북대학교 2022년 2학기)</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="dr" />
+<meta property="og:title" content="Title" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="https://guebin.github.io/DL2022/2099/01/01/dr.html" />
 <meta property="og:url" content="https://guebin.github.io/DL2022/2099/01/01/dr.html" />
@@ -14,9 +14,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2099-01-01T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="dr" />
+<meta property="twitter:title" content="Title" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2099-01-01T00:00:00-06:00","datePublished":"2099-01-01T00:00:00-06:00","headline":"dr","mainEntityOfPage":{"@type":"WebPage","@id":"https://guebin.github.io/DL2022/2099/01/01/dr.html"},"url":"https://guebin.github.io/DL2022/2099/01/01/dr.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2099-01-01T00:00:00-06:00","datePublished":"2099-01-01T00:00:00-06:00","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://guebin.github.io/DL2022/2099/01/01/dr.html"},"url":"https://guebin.github.io/DL2022/2099/01/01/dr.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/DL2022/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://guebin.github.io/DL2022/feed.xml" title="딥러닝 (전북대학교 2022년 2학기)" /><link rel="shortcut icon" type="image/x-icon" href="/DL2022/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,13 +87,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">dr</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2099-01-01T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2099-01-01T00:00:00-06:00" itemprop="datePublished">
         Jan 1, 2099
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      8 min read
     
 </span></p>
 
@@ -141,7 +141,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#51312;&#44552;-&#45231;&#49440;-&#54364;&#54788;">&#51312;&#44552; &#45231;&#49440; &#54364;&#54788;<a class="anchor-link" href="#&#51312;&#44552;-&#45231;&#49440;-&#54364;&#54788;"> </a></h3>
+<h2 id="import">import<a class="anchor-link" href="#import"> </a></h2>
 </div>
 </div>
 </div>
@@ -152,16 +152,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i2h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_embeddings</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">embedding_dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="c1"># 4 is input size, 2 is hidden size </span>
-<span class="n">tanh</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">()</span>
-<span class="n">h2o</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">out_features</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="c1"># 2 is hidden size, 4 is output size </span>
-    
-<span class="c1">## loss_fn</span>
-<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
-<span class="c1">## optimizr </span>
-<span class="c1"># optimizr = torch.optim.Adam(net.parameters())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">time</span> 
 </pre></div>
 
     </div>
@@ -173,14 +167,815 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> step1~2</p>
+<h2 id="Define-some-funtions">Define some funtions<a class="anchor-link" href="#Define-some-funtions"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span><span class="n">mapping</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">txt</span><span class="p">]</span> 
+<span class="n">soft</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Softmax</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exam4:-AbAcAd">Exam4: AbAcAd<a class="anchor-link" href="#Exam4:-AbAcAd"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="data">data<a class="anchor-link" href="#data"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;AbAcAd&#39;</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">txt</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;A&#39;, &#39;b&#39;, &#39;A&#39;, &#39;c&#39;, &#39;A&#39;, &#39;d&#39;, &#39;A&#39;, &#39;b&#39;, &#39;A&#39;, &#39;c&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt_x</span> <span class="o">=</span> <span class="n">txt</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">txt_y</span> <span class="o">=</span> <span class="n">txt</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt_x</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span><span class="n">txt_y</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>([&#39;A&#39;, &#39;b&#39;, &#39;A&#39;, &#39;c&#39;, &#39;A&#39;], [&#39;b&#39;, &#39;A&#39;, &#39;c&#39;, &#39;A&#39;, &#39;d&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">txt_x</span><span class="p">]))</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">txt_y</span><span class="p">]))</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(tensor([[1., 0., 0., 0.],
+         [0., 1., 0., 0.],
+         [1., 0., 0., 0.],
+         ...,
+         [1., 0., 0., 0.],
+         [0., 0., 1., 0.],
+         [1., 0., 0., 0.]]),
+ tensor([[0., 1., 0., 0.],
+         [1., 0., 0., 0.],
+         [0., 0., 1., 0.],
+         ...,
+         [0., 0., 1., 0.],
+         [1., 0., 0., 0.],
+         [0., 0., 0., 1.]]))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49892;&#54056;&#54664;&#45912;-&#54400;&#51060;:-&#44396;&#54788;1">&#49892;&#54056;&#54664;&#45912; &#54400;&#51060;: &#44396;&#54788;1<a class="anchor-link" href="#&#49892;&#54056;&#54664;&#45912;-&#54400;&#51060;:-&#44396;&#54788;1"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">HNet</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">i2h</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
+        <span class="k">return</span> <span class="n">hidden</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">hnet</span> <span class="o">=</span> <span class="n">HNet</span><span class="p">()</span>
+<span class="n">linr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> 
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">hnet</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">linr</span><span class="o">.</span><span class="n">parameters</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="c1">## 20번만.. </span>
+    <span class="c1">## 1</span>
+    <span class="c1">## 2</span>
+    <span class="n">hidden</span> <span class="o">=</span> <span class="n">hnet</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+    <span class="n">output</span> <span class="o">=</span> <span class="n">linr</span><span class="p">(</span><span class="n">hidden</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">output</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> 
+    <span class="c1">## 3 </span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="c1">## 4 </span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">linr</span><span class="p">(</span><span class="n">hnet</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>tensor([[-0.4160,  0.8445, -0.2058, -0.0542],
+        [-0.3381,  0.8574, -0.2034,  0.0026],
+        [-0.4160,  0.8445, -0.2058, -0.0542],
+        ...,
+        [-0.4160,  0.8445, -0.2058, -0.0542],
+        [-0.1683,  0.6776, -0.0901,  0.1631],
+        [-0.4160,  0.8445, -0.2058, -0.0542]], grad_fn=&lt;AddmmBackward0&gt;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49892;&#54056;&#54664;&#45912;-&#54400;&#51060;:-&#44396;&#54788;2">&#49892;&#54056;&#54664;&#45912; &#54400;&#51060;: &#44396;&#54788;2<a class="anchor-link" href="#&#49892;&#54056;&#54664;&#45912;-&#54400;&#51060;:-&#44396;&#54788;2"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#     def __init__(self):</span>
+<span class="c1">#         super().__init__()</span>
+<span class="c1">#         self.i2h = torch.nn.Linear(4,2)</span>
+<span class="c1">#         self.tanh = torch.nn.Tanh()</span>
+<span class="c1">#     def forward(self,x):</span>
+<span class="c1">#         hidden = self.tanh(self.i2h(x)) </span>
+<span class="c1">#         return hidden </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">hnet</span> <span class="o">=</span> <span class="n">HNet</span><span class="p">()</span>
+<span class="n">linr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> 
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">hnet</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">linr</span><span class="o">.</span><span class="n">parameters</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c1">## 1~2</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+        <span class="n">xt</span><span class="p">,</span> <span class="n">yt</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
+        <span class="n">ht</span> <span class="o">=</span> <span class="n">hnet</span><span class="p">(</span><span class="n">xt</span><span class="p">)</span>
+        <span class="n">ot</span> <span class="o">=</span> <span class="n">linr</span><span class="p">(</span><span class="n">ht</span><span class="p">)</span> 
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">+</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">ot</span><span class="p">,</span><span class="n">yt</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">T</span> 
+    <span class="c1">## 3 </span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="c1">## 4 </span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">linr</span><span class="p">(</span><span class="n">hnet</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>tensor([[-0.4160,  0.8445, -0.2058, -0.0542],
+        [-0.3381,  0.8574, -0.2034,  0.0026],
+        [-0.4160,  0.8445, -0.2058, -0.0542],
+        ...,
+        [-0.4160,  0.8445, -0.2058, -0.0542],
+        [-0.1683,  0.6776, -0.0901,  0.1631],
+        [-0.4160,  0.8445, -0.2058, -0.0542]], grad_fn=&lt;AddmmBackward0&gt;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49692;&#54872;&#49888;&#44221;&#47581;&#51032;-&#50500;&#51060;&#46356;&#50612;">&#49692;&#54872;&#49888;&#44221;&#47581;&#51032; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#&#49692;&#54872;&#49888;&#44221;&#47581;&#51032;-&#50500;&#51060;&#46356;&#50612;"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47784;&#54000;&#48652;"><strong><em>&#47784;&#54000;&#48652;</em></strong><a class="anchor-link" href="#&#47784;&#54000;&#48652;"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(예비생각1) ${\boldsymbol h}$에 대한 이해</em></strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(for문을 이용하여 loss구하기)</p>
+<p>${\boldsymbol h}$는 사실 문자열 'abcd'들을 숫자로 바꾼 또 다른 형식의 숫자표현이라 해석할 수 있음. 즉 원핫인코딩과 다른 또 다른 형태의 숫자표현이라 해석할 수 있다. (사실 원핫인코딩보다 약간 더 (1) 액기스만 남아서 (2) 숙성된 느낌을 준다)</p>
+<ul>
+<li>(why1) h는 "학습을 용이하게 하기 위해서 x를 적당히 선형적으로 전처리한 상태"라고 이해가능</li>
+<li>(why2) 실제로 예시를 살펴보면 그러했다. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>결론: 사실 ${\boldsymbol h}$는 잘 숙성되어있는 입력정보 ${\bf X}$ 그 자체로 해석 할 수 있다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(예비생각2) <a href="https://www.joongang.co.kr/article/24087690#home">수백년전통을 이어가는 방법</a></em></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>“1리터에 500만원에 낙찰된 적 있습니다.”
+“2kg에 1억원 정도 추산됩니다.”
+“20여 종 종자장을 블렌딩해 100ml에 5000만원씩 분양 예정입니다.”
+
+모두 씨간장(종자장) 가격에 관한 실제 일화다.
+
+(중략...)
+
+위스키나 와인처럼 블렌딩을 하기도 한다. 새로 담근 간장에 씨간장을 넣거나, 씨간장독에 햇간장을 넣어 맛을 유지하기도 한다. 이를 겹장(또는 덧장)이라 한다. 몇몇 종갓집에선 씨간장 잇기를 몇백 년째 해오고 있다. 매년 새로 간장을 담가야 이어갈 수 있으니 불씨 꺼트리지 않는 것처럼 굉장히 어려운 일이다.
+이렇게 하는 이유는 집집마다 내려오는 고유 장맛을 잃지 않기 위함이다. 씨간장이란 그만큼 소중한 주방의 자산이며 정체성이다.</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>덧장: 새로운간장을 만들때, 옛날간장을 섞어서 만듬</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>*</code> 기존방식</p>
+<ul>
+<li>$\text{콩물} \overset{\text{숙성}}{\longrightarrow} \text{간장}$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>*</code> 수백년 전통의 간장맛을 유지하는 방식</p>
+<ul>
+<li>$\text{콩물}_0 \overset{\text{숙성}}{\longrightarrow} \text{간장}_0$</li>
+<li>$\text{콩물}_1, \text{간장}_0 \overset{\text{숙성}}{\longrightarrow} \text{간장}_1$</li>
+<li>$\text{콩물}_2, \text{간장}_1 \overset{\text{숙성}}{\longrightarrow} \text{간장}_2$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>*</code> 수백년 전통의 간장맛을 유지하면서 조리를 한다면?</p>
+<ul>
+<li>$\text{콩물}_0 \overset{\text{숙성}}{\longrightarrow} \text{간장}_0 \overset{\text{조리}}{\longrightarrow} \text{간장계란밥}_0$</li>
+<li>$\text{콩물}_1, \text{간장}_0 \overset{\text{숙성}}{\longrightarrow} \text{간장}_1 \overset{\text{조리}}{\longrightarrow} \text{간장계란밥}_1$</li>
+<li>$\text{콩물}_2, \text{간장}_1 \overset{\text{숙성}}{\longrightarrow} \text{간장}_2 \overset{\text{조리}}{\longrightarrow} \text{간장계란밥}_2$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>점점 맛있는 간장계란밥이 탄생함</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>아이디어</em></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>*</code> 수백년 전통의 간장맛을 유지하면서 조리하는 과정을 수식으로?</p>
+<ul>
+<li>$\boldsymbol{x}_0 \overset{\text{숙성}}{\longrightarrow} \boldsymbol{h}_0 \overset{\text{조리}}{\longrightarrow} \hat{\boldsymbol y}_0$</li>
+<li>$\boldsymbol{x}_1, \boldsymbol{h}_0 \overset{\text{숙성}}{\longrightarrow} \boldsymbol{h}_1 \overset{\text{조리}}{\longrightarrow} \hat{\boldsymbol y}_1$</li>
+<li>$\boldsymbol{x}_2, \boldsymbol{h}_1 \overset{\text{숙성}}{\longrightarrow} \boldsymbol{h}_2 \overset{\text{조리}}{\longrightarrow} \hat{\boldsymbol y}_2$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>이제 우리가 배울것은 (1) "$\text{콩물}_{t}$"와 "$\text{간장}_{t-1}$"로 "$\text{간장}_t$"를 <code>숙성</code>하는 방법 (2) "$\text{간장}_t$"로 "$\text{간장계란밥}_t$를 <code>조리</code>하는 방법이다</p>
+<p>즉 <code>숙성</code>담당 네트워크와 <code>조리</code>담당 네트워크를 각각 만들어 학습하면 된다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(예비학습3)</em></strong> 두개의 네트워크를 학습하는 방법</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#44592;&#51316;&#44396;&#51312;"><strong><em>&#44592;&#51316;&#44396;&#51312;</em></strong><a class="anchor-link" href="#&#44592;&#51316;&#44396;&#51312;"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#48148;&#45068;&#45716;-&#44396;&#51312;"><strong><em>&#48148;&#45068;&#45716; &#44396;&#51312;</em></strong><a class="anchor-link" href="#&#48148;&#45068;&#45716;-&#44396;&#51312;"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(1) $t=0$</p>
+<p>${\boldsymbol h}_0=[[0,0]]$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(2) $t=1$</p>
+<p>${\boldsymbol h}_1= \tanh({\boldsymbol x}_1{\bf W}_{ih}+{\boldsymbol h}_0{\bf W}_{hh}+{\boldsymbol b}_{ih}+{\boldsymbol b}_{hh})$</p>
+<ul>
+<li>${\boldsymbol x}_1$: (1,4) </li>
+<li>${\bf W}_{ih}$: (4,2) </li>
+<li>${\boldsymbol h}_0$: (1,2) </li>
+<li>${\bf W}_{hh}$: (2,2) </li>
+<li>${\boldsymbol b}_{ih}$: (1,2)</li>
+<li>${\boldsymbol b}_{hh}$: (1,2)</li>
+</ul>
+<p>${\boldsymbol o}_1= {\bf W}_{ho}{\boldsymbol h}_1+{\boldsymbol b}_{ho}$</p>
+<p>$\hat{\boldsymbol y}_1 = \text{soft}({\boldsymbol o}_1)$</p>
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>일반화된 알고리즘</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(ver1)</em></strong></p>
+<p>init $\boldsymbol{h}_0$</p>
+<p>for $t$ in $1:T$</p>
+<ul>
+<li>${\boldsymbol h}_t= \tanh({\boldsymbol x}_t{\bf W}_{ih}+{\boldsymbol h}_{t-1}{\bf W}_{hh}+{\boldsymbol b}_{ih}+{\boldsymbol b}_{hh})$</li>
+<li>${\boldsymbol o}_t= {\bf W}_{ho}{\boldsymbol h}_1+{\boldsymbol b}_{ho}$</li>
+<li>$\hat{\boldsymbol y}_t = \text{soft}({\boldsymbol o}_1)$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(ver2)</em></strong></p>
+<div class="highlight"><pre><span></span><span class="n">init</span> <span class="n">hidden</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">T</span> 
+    <span class="n">hidden</span> <span class="o">=</span> <span class="n">tanh</span><span class="p">(</span><span class="n">linr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">linr</span><span class="p">(</span><span class="n">hidden</span><span class="p">))</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">linr</span><span class="p">(</span><span class="n">hidden</span><span class="p">)</span>
+    <span class="n">yt_hat</span> <span class="o">=</span> <span class="n">soft</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>코드상으로는 $h_t$와 $h_{t-1}$의 구분이 교모하게 사라진다. (그래서 오히려 좋아)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(ㄴㅇㄹ)</em></strong></p>
+<div class="highlight"><pre><span></span><span class="c1">### </span>
+<span class="k">class</span> <span class="nc">rNNCell</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">linr1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="err">?</span><span class="p">,</span><span class="err">?</span><span class="p">)</span> 
+        <span class="n">linr2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="err">?</span><span class="p">,</span><span class="err">?</span><span class="p">)</span> 
+        <span class="n">tanh</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">hidden</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="n">hidden</span> <span class="o">=</span> <span class="n">tanh</span><span class="p">(</span><span class="n">lrnr1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">lrnr2</span><span class="p">(</span><span class="n">hidden</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">hidden</span>
+
+<span class="n">init</span> <span class="n">ht</span>
+<span class="n">rnncell</span> <span class="o">=</span> <span class="n">rNNCell</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">T</span> 
+    <span class="n">xt</span><span class="p">,</span> <span class="n">yt</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span> 
+    <span class="n">ht</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">xt</span><span class="p">,</span> <span class="n">ht</span><span class="p">)</span>
+    <span class="n">ot</span> <span class="o">=</span> <span class="n">linr</span><span class="p">(</span><span class="n">ht</span><span class="p">)</span> 
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">+</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">ot</span><span class="p">,</span> <span class="n">yt</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49692;&#54872;&#49888;&#44221;&#47581;-&#44396;&#54788;1----&#49457;&#44277;">&#49692;&#54872;&#49888;&#44221;&#47581; &#44396;&#54788;1 -- &#49457;&#44277;<a class="anchor-link" href="#&#49692;&#54872;&#49888;&#44221;&#47581;-&#44396;&#54788;1----&#49457;&#44277;"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> 숙성담당 네트워크</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 전통을 보존하지 않고 간장을 만드는 방식 </span>
+<span class="c1"># class HNet(torch.nn.Module):</span>
+<span class="c1">#     def __init__(self):</span>
+<span class="c1">#         super().__init__()</span>
+<span class="c1">#         self.i2h = torch.nn.Linear(4,2)</span>
+<span class="c1">#         self.tanh = torch.nn.Tanh()</span>
+<span class="c1">#     def forward(self,x):</span>
+<span class="c1">#         hidden = self.tanh(self.i2h(x)) </span>
+<span class="c1">#         return hidden </span>
+
+<span class="k">class</span> <span class="nc">rNNCell</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">## 콩물1 -&gt; linr(콩물1)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h2h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">## 간장0 -&gt; linr(간장0)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">hidden</span><span class="p">):</span>
+        <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">i2h</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">h2h</span><span class="p">(</span><span class="n">hidden</span><span class="p">))</span> <span class="c1">## linr(콩물1) + linr(간장0)---tanh---&gt; 간장1  // **이게 비법 </span>
+        <span class="k">return</span> <span class="n">hidden</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">rnncell</span> <span class="o">=</span> <span class="n">rNNCell</span><span class="p">()</span> <span class="c1"># 숙성담당</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(2)</code> 조리담당 네트워크</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">cook</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># 조리담당</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(3)</code> 손실함수, 옵티마이저 설계</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span> 
+<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">rnncell</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">cook</span><span class="o">.</span><span class="n">parameters</span><span class="p">()))</span> <span class="c1"># 우리가 배울것: 숙성하는 방법 + 요리하는 방법 </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>${\bf W}_{ih}, {\bf W}_{hh}, {\boldsymbol b}_{ih}, {\boldsymbol b}_{hh}$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(4)</code> 학습 (6분정도 걸림)</p>
 
 </div>
 </div>
@@ -193,31 +988,24 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span> 
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="n">x_t</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
-    <span class="n">y_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
-    <span class="n">h_t</span> <span class="o">=</span> <span class="n">tanh</span><span class="p">(</span><span class="n">i2h</span><span class="p">(</span><span class="n">x_t</span><span class="p">))</span>
-    <span class="n">yhat_t</span> <span class="o">=</span> <span class="n">h2o</span><span class="p">(</span><span class="n">h_t</span><span class="p">)</span> <span class="c1"># softmax 전 </span>
-    <span class="n">loss</span> <span class="o">+=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">yhat_t</span><span class="p">,</span><span class="n">y_t</span><span class="p">)</span> 
-<span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">T</span>
-<span class="n">loss</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="c1">## 1~2</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">ht</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+        <span class="n">xt</span><span class="p">,</span> <span class="n">yt</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>       
+        <span class="n">ht</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">xt</span><span class="p">,</span><span class="n">ht</span><span class="p">)</span> <span class="c1"># </span>
+        <span class="n">ot</span> <span class="o">=</span> <span class="n">cook</span><span class="p">(</span><span class="n">ht</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">+</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">ot</span><span class="p">,</span><span class="n">yt</span><span class="p">)</span> 
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">T</span> 
+    <span class="c1">## 3 </span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="c1">## 4 </span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> 
+<span class="n">t2</span><span class="o">-</span><span class="n">t1</span>
 </pre></div>
 
     </div>
@@ -232,7 +1020,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(1.5047, grad_fn=&lt;DivBackward0&gt;)</pre>
+<pre>313.3899025917053</pre>
 </div>
 
 </div>
@@ -245,7 +1033,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(하던대로 loss구하기)</p>
+<p><code>(5)</code> 시각화</p>
 
 </div>
 </div>
@@ -257,8 +1045,30 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="n">i2h</span><span class="p">,</span><span class="n">tanh</span><span class="p">,</span><span class="n">h2o</span><span class="p">)</span>
-<span class="n">loss_fn</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">hidden</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 599년치 h를 담을 변수 </span>
+<span class="n">_water</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 맹물 </span>
+<span class="n">hidden</span><span class="p">[[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span><span class="n">_water</span><span class="p">)</span> 
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">hidden</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span><span class="n">hidden</span><span class="p">[[</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yhat</span> <span class="o">=</span> <span class="n">soft</span><span class="p">(</span><span class="n">cook</span><span class="p">(</span><span class="n">hidden</span><span class="p">))</span>
+<span class="n">yhat</span> 
 </pre></div>
 
     </div>
@@ -273,7 +1083,58 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(1.5047, grad_fn=&lt;NllLossBackward0&gt;)</pre>
+<pre>tensor([[1.6522e-02, 6.2036e-01, 1.0433e-01, 2.5879e-01],
+        [9.9965e-01, 6.5788e-05, 1.8450e-05, 2.6785e-04],
+        [7.6673e-05, 1.9704e-01, 8.0201e-01, 8.7218e-04],
+        ...,
+        [7.4634e-05, 1.9501e-01, 8.0407e-01, 8.4751e-04],
+        [9.4785e-01, 7.4712e-03, 6.1181e-04, 4.4064e-02],
+        [3.6306e-02, 1.2466e-01, 2.8862e-03, 8.3615e-01]],
+       grad_fn=&lt;SoftmaxBackward0&gt;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">yhat</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">:])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.image.AxesImage at 0x7fdfd0737cd0&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+" />
 </div>
 
 </div>
@@ -286,7 +1147,37 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> step3</p>
+<ul>
+<li>아주 특이한 특징: yhat[:15], yhat[:-15] 의 적합결과가 다르다</li>
+<li>왜? 간장계란밥은 간장이 중요한데, 간장은 시간이 갈수록 맛있어지니까..</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49692;&#54872;&#49888;&#44221;&#47581;-&#44396;&#54788;2-(with-RNNCell)----&#49457;&#44277;">&#49692;&#54872;&#49888;&#44221;&#47581; &#44396;&#54788;2 (with RNNCell) -- &#49457;&#44277;<a class="anchor-link" href="#&#49692;&#54872;&#49888;&#44221;&#47581;-&#44396;&#54788;2-(with-RNNCell)----&#49457;&#44277;"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ref: <a href="https://pytorch.org/docs/stable/generated/torch.nn.RNNCell.html">https://pytorch.org/docs/stable/generated/torch.nn.RNNCell.html</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> 숙성네트워크</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>선언</p>
 
 </div>
 </div>
@@ -298,7 +1189,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnncell</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">RNNCell</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -310,7 +1201,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> step4</p>
+<p>가중치초기화</p>
 
 </div>
 </div>
@@ -322,7 +1213,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># optimizr = torch.optim.Adam(net.parameters()) &lt;-- 여기서 막힌다..</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">_rnncell</span> <span class="o">=</span> <span class="n">rNNCell</span><span class="p">()</span> <span class="c1"># 숙성담당</span>
 </pre></div>
 
     </div>
@@ -332,6 +1224,254 @@ window.onload = wrap_img;
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnncell</span><span class="o">.</span><span class="n">weight_ih</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">i2h</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnncell</span><span class="o">.</span><span class="n">bias_ih</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">i2h</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnncell</span><span class="o">.</span><span class="n">weight_hh</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">h2h</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnncell</span><span class="o">.</span><span class="n">bias_hh</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">h2h</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(2)</code> 조리네트워크</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">cook</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># 조리담당</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(3)</code> 손실함수와 옵티마이저</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span> 
+<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">rnncell</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">cook</span><span class="o">.</span><span class="n">parameters</span><span class="p">()))</span> <span class="c1"># 우리가 배울것: 숙성하는 방법 + 요리하는 방법 </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(4)</code> 학습</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="c1">## 1~2</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">ht</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+        <span class="n">xt</span><span class="p">,</span> <span class="n">yt</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>       
+        <span class="n">ht</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">xt</span><span class="p">,</span><span class="n">ht</span><span class="p">)</span> 
+        <span class="n">ot</span> <span class="o">=</span> <span class="n">cook</span><span class="p">(</span><span class="n">ht</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">+</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">ot</span><span class="p">,</span><span class="n">yt</span><span class="p">)</span> 
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">T</span> 
+    <span class="c1">## 3 </span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="c1">## 4 </span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> 
+<span class="n">t2</span><span class="o">-</span><span class="n">t1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>314.6121292114258</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(5)</code> 시각화</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">hidden</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 599년치 h를 담을 변수 </span>
+<span class="n">_water</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 맹물 </span>
+<span class="n">hidden</span><span class="p">[[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span><span class="n">_water</span><span class="p">)</span> 
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">hidden</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span><span class="n">hidden</span><span class="p">[[</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yhat</span> <span class="o">=</span> <span class="n">soft</span><span class="p">(</span><span class="n">cook</span><span class="p">(</span><span class="n">hidden</span><span class="p">))</span>
+<span class="n">yhat</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>tensor([[1.6522e-02, 6.2036e-01, 1.0433e-01, 2.5879e-01],
+        [9.9965e-01, 6.5788e-05, 1.8450e-05, 2.6785e-04],
+        [7.6673e-05, 1.9704e-01, 8.0201e-01, 8.7218e-04],
+        ...,
+        [7.4634e-05, 1.9501e-01, 8.0407e-01, 8.4751e-04],
+        [9.4785e-01, 7.4712e-03, 6.1181e-04, 4.4064e-02],
+        [3.6306e-02, 1.2466e-01, 2.8862e-03, 8.3615e-01]],
+       grad_fn=&lt;SoftmaxBackward0&gt;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">yhat</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">:])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.image.AxesImage at 0x7fdfd058f8d0&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+" />
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49692;&#54872;&#49888;&#44221;&#47581;-&#44396;&#54788;3-(with-RNN)----&#49457;&#44277;">&#49692;&#54872;&#49888;&#44221;&#47581; &#44396;&#54788;3 (with RNN) -- &#49457;&#44277;<a class="anchor-link" href="#&#49692;&#54872;&#49888;&#44221;&#47581;-&#44396;&#54788;3-(with-RNN)----&#49457;&#44277;"> </a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr />
@@ -341,14 +1481,14 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>완성하려면?</p>
+<p>(예비학습)</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> step1~2</p>
+<p><code>-</code> 아무리 생각해도 yhat구하려면 좀 귀찮음</p>
 
 </div>
 </div>
@@ -360,16 +1500,12 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RNN0</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span> <span class="c1">## RNN을 이해하기 위한 네트워크, 실제로 순환신경망은 아님</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_embeddings</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">embedding_dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">h2o</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">out_features</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x_t</span><span class="p">):</span>
-        <span class="n">h_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">i2h</span><span class="p">(</span><span class="n">x_t</span><span class="p">))</span>
-        <span class="n">yhat_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">h2o</span><span class="p">(</span><span class="n">h_t</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">yhat_t</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">hidden</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 599년치 h를 담을 변수 </span>
+<span class="n">_water</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 맹물 </span>
+<span class="n">hidden</span><span class="p">[[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span><span class="n">_water</span><span class="p">)</span> 
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">hidden</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span> <span class="o">=</span> <span class="n">rnncell</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]],</span><span class="n">hidden</span><span class="p">[[</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 </pre></div>
 
     </div>
@@ -386,31 +1522,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn0</span> <span class="o">=</span> <span class="n">RNN0</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span> 
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="n">x_t</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
-    <span class="n">y_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
-    <span class="n">yhat_t</span> <span class="o">=</span> <span class="n">rnn0</span><span class="p">(</span><span class="n">x_t</span><span class="p">)</span>
-    <span class="n">loss</span> <span class="o">+=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">yhat_t</span><span class="p">,</span><span class="n">y_t</span><span class="p">)</span> 
-<span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">T</span>
-<span class="n">loss</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soft</span><span class="p">(</span><span class="n">cook</span><span class="p">(</span><span class="n">hidden</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -425,7 +1537,14 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(1.5421, grad_fn=&lt;DivBackward0&gt;)</pre>
+<pre>tensor([[1.6522e-02, 6.2036e-01, 1.0433e-01, 2.5879e-01],
+        [9.9965e-01, 6.5788e-05, 1.8450e-05, 2.6785e-04],
+        [7.6673e-05, 1.9704e-01, 8.0201e-01, 8.7218e-04],
+        ...,
+        [7.4634e-05, 1.9501e-01, 8.0407e-01, 8.4751e-04],
+        [9.4785e-01, 7.4712e-03, 6.1181e-04, 4.4064e-02],
+        [3.6306e-02, 1.2466e-01, 2.8862e-03, 8.3615e-01]],
+       grad_fn=&lt;SoftmaxBackward0&gt;)</pre>
 </div>
 
 </div>
@@ -438,7 +1557,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(잘 코딩했나 확인)</p>
+<p><code>-</code> 이렇게 하면 쉽게(?) 구할 수 있음</p>
 
 </div>
 </div>
@@ -450,11 +1569,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
-    <span class="n">rnn0</span><span class="o">.</span><span class="n">i2h</span><span class="p">,</span>
-    <span class="n">rnn0</span><span class="o">.</span><span class="n">tanh</span><span class="p">,</span>
-    <span class="n">rnn0</span><span class="o">.</span><span class="n">h2o</span>
-<span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">RNN</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -471,7 +1586,27 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_fn</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span><span class="o">.</span><span class="n">weight_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">weight_hh</span><span class="o">.</span><span class="n">data</span> 
+<span class="n">rnn</span><span class="o">.</span><span class="n">bias_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">bias_hh</span><span class="o">.</span><span class="n">data</span> 
+<span class="n">rnn</span><span class="o">.</span><span class="n">weight_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">weight_ih</span><span class="o">.</span><span class="n">data</span> 
+<span class="n">rnn</span><span class="o">.</span><span class="n">bias_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">bias_ih</span><span class="o">.</span><span class="n">data</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_water</span>
 </pre></div>
 
     </div>
@@ -486,59 +1621,11 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(1.5421, grad_fn=&lt;NllLossBackward0&gt;)</pre>
+<pre>tensor([[0., 0.]])</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> step3</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> step4</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">rnn0</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -552,8 +1639,138 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
-<span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soft</span><span class="p">(</span><span class="n">cook</span><span class="p">(</span><span class="n">rnn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">_water</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>tensor([[1.6522e-02, 6.2036e-01, 1.0433e-01, 2.5879e-01],
+        [9.9965e-01, 6.5788e-05, 1.8450e-05, 2.6785e-04],
+        [7.6673e-05, 1.9704e-01, 8.0201e-01, 8.7218e-04],
+        ...,
+        [7.4634e-05, 1.9501e-01, 8.0407e-01, 8.4751e-04],
+        [9.4785e-01, 7.4712e-03, 6.1181e-04, 4.4064e-02],
+        [3.6306e-02, 1.2466e-01, 2.8862e-03, 8.3615e-01]],
+       grad_fn=&lt;SoftmaxBackward0&gt;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>똑같음!</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> rnn(x,_water)의 결과는 (1) 599년치 간장 (2) 599번째 간장 이다</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">_water</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(tensor([[-0.2232,  0.9769],
+         [-0.9999, -0.9742],
+         [ 0.9154,  0.9992],
+         ...,
+         [ 0.9200,  0.9992],
+         [-0.9978, -0.0823],
+         [-0.9154,  0.9965]], grad_fn=&lt;SqueezeBackward1&gt;),
+ tensor([[-0.9154,  0.9965]], grad_fn=&lt;SqueezeBackward1&gt;))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(예비학습결론) torch.nn.RNN(4,2)는 torch.nn.RNNCell(4,2)의 batch 버전이다. (for문이 포함된 버전이다)</em></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>torch.nn.RNN(4,2)를 이용하여 구현하자.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> 숙성네트워크</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>선언</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">RNN</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -565,7 +1782,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> 반복</p>
+<p>가중치초기화</p>
 
 </div>
 </div>
@@ -578,9 +1795,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="n">rnn0</span> <span class="o">=</span> <span class="n">RNN0</span><span class="p">()</span>
-<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
-<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">rnn0</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<span class="n">_rnncell</span> <span class="o">=</span> <span class="n">rNNCell</span><span class="p">()</span> 
 </pre></div>
 
     </div>
@@ -597,37 +1812,98 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="c1">## 1 ~ 2 </span>
-    <span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span> 
-    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-        <span class="n">x_t</span> <span class="o">=</span> <span class="n">x</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
-        <span class="n">y_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">[[</span><span class="n">t</span><span class="p">]]</span>
-        <span class="n">yhat_t</span> <span class="o">=</span> <span class="n">rnn0</span><span class="p">(</span><span class="n">x_t</span><span class="p">)</span>
-        <span class="n">loss</span> <span class="o">+=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">yhat_t</span><span class="p">,</span><span class="n">y_t</span><span class="p">)</span> 
-    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">T</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span><span class="o">.</span><span class="n">weight_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">i2h</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnn</span><span class="o">.</span><span class="n">bias_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">i2h</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnn</span><span class="o">.</span><span class="n">weight_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">h2h</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnn</span><span class="o">.</span><span class="n">bias_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">h2h</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(2)</code> 조리네트워크</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
+<span class="n">cook</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(3)</code> 손실함수와 옵티마이저</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span> 
+<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">rnn</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">cook</span><span class="o">.</span><span class="n">parameters</span><span class="p">()))</span> <span class="c1"># 우리가 배울것: 숙성하는 방법 + 요리하는 방법 </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(4)</code> 학습</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="c1">## 1</span>
+    <span class="n">_water</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">hidden</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rnn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">_water</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">cook</span><span class="p">(</span><span class="n">hidden</span><span class="p">)</span>
+    <span class="c1">## 2 </span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">output</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> 
     <span class="c1">## 3 </span>
     <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
     <span class="c1">## 4 </span>
     <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
     <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn0</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> 
+<span class="n">t2</span><span class="o">-</span><span class="n">t1</span>
 </pre></div>
 
     </div>
@@ -642,7 +1918,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([ 0.0196, -0.8627,  0.4574,  0.4201], grad_fn=&lt;SelectBackward0&gt;)</pre>
+<pre>63.54761457443237</pre>
 </div>
 
 </div>
@@ -655,7 +1931,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(확인)</p>
+<p><code>(5)</code> 시각화</p>
 
 </div>
 </div>
@@ -667,56 +1943,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="n">rnn0</span> <span class="o">=</span> <span class="n">RNN0</span><span class="p">()</span>
-<span class="n">net</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
-    <span class="n">rnn0</span><span class="o">.</span><span class="n">i2h</span><span class="p">,</span>
-    <span class="n">rnn0</span><span class="o">.</span><span class="n">tanh</span><span class="p">,</span>
-    <span class="n">rnn0</span><span class="o">.</span><span class="n">h2o</span>
-<span class="p">)</span>
-<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
-<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">epoc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="c1">## 1 ~ 2 </span>
-    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">y</span><span class="p">)</span>
-    <span class="c1">## 3 </span>
-    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
-    <span class="c1">## 4 </span>
-    <span class="n">optimizr</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
-    <span class="n">optimizr</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">net</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yhat</span> <span class="o">=</span> <span class="n">soft</span><span class="p">(</span><span class="n">cook</span><span class="p">(</span><span class="n">rnn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">_water</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">yhat</span>
 </pre></div>
 
     </div>
@@ -731,37 +1959,18 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([ 0.0196, -0.8627,  0.4574,  0.4201], grad_fn=&lt;SelectBackward0&gt;)</pre>
+<pre>tensor([[1.6522e-02, 6.2036e-01, 1.0433e-01, 2.5879e-01],
+        [9.9965e-01, 6.5788e-05, 1.8450e-05, 2.6785e-04],
+        [7.6673e-05, 1.9704e-01, 8.0201e-01, 8.7218e-04],
+        ...,
+        [7.4634e-05, 1.9501e-01, 8.0407e-01, 8.4751e-04],
+        [9.4785e-01, 7.4711e-03, 6.1181e-04, 4.4064e-02],
+        [3.6306e-02, 1.2466e-01, 2.8862e-03, 8.3615e-01]],
+       grad_fn=&lt;SoftmaxBackward0&gt;)</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="sol----&#49692;&#54872;&#49888;&#44221;&#47581;">sol -- &#49692;&#54872;&#49888;&#44221;&#47581;<a class="anchor-link" href="#sol----&#49692;&#54872;&#49888;&#44221;&#47581;"> </a></h3>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="n">rnn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">RNN</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">hidden_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
-<span class="n">optimizr</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">rnn</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -775,7 +1984,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">yhat</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="mi">15</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -790,40 +1999,18 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>torch.Size([599])</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fdfd0634150&gt;</pre>
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
 
 <div class="output_area">
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>torch.Size([599, 4])</pre>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+" />
 </div>
 
 </div>
@@ -841,117 +2028,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>tensor([1., 0., 0., 0.])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span><span class="p">,</span><span class="n">hnn</span> <span class="o">=</span> <span class="n">rnn</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()[[</span><span class="mi">0</span><span class="p">]])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">hnn</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(torch.Size([1, 2]), torch.Size([1, 2]))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RNN</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_letters</span><span class="p">,</span> <span class="n">n_hidden</span><span class="p">,</span> <span class="n">n_categories</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_letters</span> <span class="o">+</span> <span class="n">n_hidden</span><span class="p">,</span> <span class="n">n_hidden</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">i2o</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_letters</span> <span class="o">+</span> <span class="n">n_hidden</span><span class="p">,</span> <span class="n">n_categories</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
-        <span class="n">concat_xh</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> 
-        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span><span class="p">(</span><span class="n">concat_xh</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2o</span><span class="p">(</span><span class="n">concat_xh</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span> <span class="o">=</span> <span class="n">RNN</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>gita dd
 </pre></div>
 
     </div>
