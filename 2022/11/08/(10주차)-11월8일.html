@@ -147,7 +147,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#순환신경망의-아이디어">순환신경망의 아이디어 </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#모티브">모티브 </a></li>
-<li class="toc-entry toc-h4"><a href="#바뀌는-구조">바뀌는 구조 </a></li>
+<li class="toc-entry toc-h4"><a href="#알고리즘">알고리즘 </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#순환신경망-구현1----성공">순환신경망 구현1 -- 성공 </a></li>
@@ -1565,9 +1565,17 @@ tensor([-0.1656], requires_grad=True)
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="바뀌는-구조">
-<a class="anchor" href="#%EB%B0%94%EB%80%8C%EB%8A%94-%EA%B5%AC%EC%A1%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong><em>바뀌는 구조</em></strong><a class="anchor-link" href="#%EB%B0%94%EB%80%8C%EB%8A%94-%EA%B5%AC%EC%A1%B0"> </a>
+<h4 id="알고리즘">
+<a class="anchor" href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong><em>알고리즘</em></strong><a class="anchor-link" href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"> </a>
 </h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>세부적인 알고리즘 ($t=0,1,2,\dots$에 대하여 한줄 한줄 쓴 알고리즘)</strong></p>
+
 </div>
 </div>
 </div>
@@ -1576,14 +1584,6 @@ tensor([-0.1656], requires_grad=True)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>(1) $t=0$</p>
 <p>${\boldsymbol h}_0=[[0,0]]$ &lt;-- $\text{간장}_0$은 맹물로 초기화</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
 
 </div>
 </div>
@@ -1603,6 +1603,7 @@ tensor([-0.1656], requires_grad=True)
 </ul>
 <p>${\boldsymbol o}_1= {\bf W}_{ho}{\boldsymbol h}_1+{\boldsymbol b}_{ho}$</p>
 <p>$\hat{\boldsymbol y}_1 = \text{soft}({\boldsymbol o}_1)$</p>
+<p>(3) $t=2$ &lt;-- 여기서부터는 $t=2$와 비슷</p>
 <hr>
 
 </div>
@@ -1611,7 +1612,7 @@ tensor([-0.1656], requires_grad=True)
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>일반화된 알고리즘</p>
+<p><strong>좀 더 일반화된 알고리즘</strong></p>
 
 </div>
 </div>
