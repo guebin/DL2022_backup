@@ -139,10 +139,10 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#강의영상">강의영상 </a></li>
 <li class="toc-entry toc-h2"><a href="#import">import </a></li>
 <li class="toc-entry toc-h2"><a href="#Define-some-funtions">Define some funtions </a></li>
-<li class="toc-entry toc-h2"><a href="#Exam4:-AbAcAd">Exam4: AbAcAd </a>
+<li class="toc-entry toc-h2"><a href="#Exam4:-AbAcAd-(3)">Exam4: AbAcAd (3) </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#data">data </a></li>
-<li class="toc-entry toc-h3"><a href="#순환신경망-구현2-(with-RNNCell,-hidden-node-2)----성공">순환신경망 구현2 (with RNNCell, hidden node 2) -- 성공 </a></li>
+<li class="toc-entry toc-h3"><a href="#순환신경망-구현2-(with-RNNCell,-hidden-node-2)----성공-(복습)">순환신경망 구현2 (with RNNCell, hidden node 2) -- 성공 (복습) </a></li>
 <li class="toc-entry toc-h3"><a href="#순환신경망-구현3-(with-RNN,-hidden-node-2)----성공">순환신경망 구현3 (with RNN, hidden node 2) -- 성공 </a></li>
 <li class="toc-entry toc-h3"><a href="#순환신경망-구현4-(with-RNN,-hidden-node-3)----성공">순환신경망 구현4 (with RNN, hidden node 3) -- 성공 </a></li>
 </ul>
@@ -238,8 +238,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exam4:-AbAcAd">
-<a class="anchor" href="#Exam4:-AbAcAd" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exam4: AbAcAd<a class="anchor-link" href="#Exam4:-AbAcAd"> </a>
+<h2 id="Exam4:-AbAcAd-(3)">
+<a class="anchor" href="#Exam4:-AbAcAd-(3)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exam4: AbAcAd (3)<a class="anchor-link" href="#Exam4:-AbAcAd-(3)"> </a>
 </h2>
 </div>
 </div>
@@ -413,8 +413,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="순환신경망-구현2-(with-RNNCell,-hidden-node-2)----성공">
-<a class="anchor" href="#%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9D-%EA%B5%AC%ED%98%842-(with-RNNCell,-hidden-node-2)----%EC%84%B1%EA%B3%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>순환신경망 구현2 (with RNNCell, hidden node 2) -- 성공<a class="anchor-link" href="#%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9D-%EA%B5%AC%ED%98%842-(with-RNNCell,-hidden-node-2)----%EC%84%B1%EA%B3%B5"> </a>
+<h3 id="순환신경망-구현2-(with-RNNCell,-hidden-node-2)----성공-(복습)">
+<a class="anchor" href="#%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9D-%EA%B5%AC%ED%98%842-(with-RNNCell,-hidden-node-2)----%EC%84%B1%EA%B3%B5-(%EB%B3%B5%EC%8A%B5)" aria-hidden="true"><span class="octicon octicon-link"></span></a>순환신경망 구현2 (with RNNCell, hidden node 2) -- 성공 (복습)<a class="anchor-link" href="#%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9D-%EA%B5%AC%ED%98%842-(with-RNNCell,-hidden-node-2)----%EC%84%B1%EA%B3%B5-(%EB%B3%B5%EC%8A%B5)"> </a>
 </h3>
 </div>
 </div>
@@ -653,7 +653,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ec79f2090&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe67cda0910&gt;</pre>
 </div>
 
 </div>
@@ -696,7 +696,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ec7e1b610&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe67c28ff90&gt;</pre>
 </div>
 
 </div>
@@ -962,7 +962,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="n">rnncell</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">RNNCell</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">_rnncell</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">RNNCell</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -979,10 +979,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span><span class="o">.</span><span class="n">weight_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">weight_hh</span><span class="o">.</span><span class="n">data</span> 
-<span class="n">rnn</span><span class="o">.</span><span class="n">weight_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">weight_ih</span><span class="o">.</span><span class="n">data</span>
-<span class="n">rnn</span><span class="o">.</span><span class="n">bias_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">bias_hh</span><span class="o">.</span><span class="n">data</span>
-<span class="n">rnn</span><span class="o">.</span><span class="n">bias_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">rnncell</span><span class="o">.</span><span class="n">bias_ih</span><span class="o">.</span><span class="n">data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnn</span><span class="o">.</span><span class="n">weight_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">weight_hh</span><span class="o">.</span><span class="n">data</span> 
+<span class="n">rnn</span><span class="o">.</span><span class="n">weight_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">weight_ih</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnn</span><span class="o">.</span><span class="n">bias_hh_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">bias_hh</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rnn</span><span class="o">.</span><span class="n">bias_ih_l0</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_rnncell</span><span class="o">.</span><span class="n">bias_ih</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 
     </div>
@@ -1127,7 +1127,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ebdac4ed0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe67c231310&gt;</pre>
 </div>
 
 </div>
@@ -1180,7 +1180,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ebdb41fd0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe67c1c5d90&gt;</pre>
 </div>
 
 </div>
@@ -1312,7 +1312,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ebda53ed0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe67c13b7d0&gt;</pre>
 </div>
 
 </div>
@@ -1488,7 +1488,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ebdfd47d0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe67c04f550&gt;</pre>
 </div>
 
 </div>
@@ -1556,7 +1556,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f7ebdf58750&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fe6747ba910&gt;</pre>
 </div>
 
 </div>
